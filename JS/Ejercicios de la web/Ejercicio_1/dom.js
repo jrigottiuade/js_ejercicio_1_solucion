@@ -1,4 +1,4 @@
-
+// DOM 1 - Mostrar paquetes en consola
 const mostrarPaquetes = document.querySelector("#mostrar-btn")
 
 mostrarPaquetes.addEventListener("click", () => {
@@ -10,8 +10,8 @@ const formAgregarDestino = document.querySelector("#agregar-form")
 formAgregarDestino.addEventListener("submit", (e) => {
     e.preventDefault()
     const nuevoDestino = e.target.elements["nuevo-paquete"].value.trim()
-    funcionInsertarDestino(paquetes, nuevoDestino)
-    console.log("Nuevo destino insertado exitosamente.")
+    resultado = funcionInsertarDestino(paquetes, nuevoDestino)
+    console.log(resultado ? "Nuevo destino insertado exitosamente." : "Error al insertar destino")
     formAgregarDestino.reset()
 }
 )
